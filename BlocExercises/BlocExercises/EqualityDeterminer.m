@@ -12,28 +12,25 @@
 
 - (BOOL) string:(NSString *)string1 isTheSameAsString:(NSString *)string2 {
     
-    NSString *firstString = @"Cereal";
-    NSString *secondString = @"Cereal";
+    NSString *cheerios = @"cheerio";
+    NSString *cheerios2 = @"cheerio";
+   
+   
     
-    string1 = firstString;
-    string2 = secondString;
+    return cheerios == cheerios2;
     
-    return (string1 == string2);
+    
 }
 
 - (BOOL) number:(NSNumber *)number1 isTheSameAsNumber:(NSNumber *)number2 {
     
   
-    NSNumber *one = [NSNumber numberWithFloat:5];
-    NSNumber *sameAsOne = [NSNumber numberWithFloat:5];
+    NSNumber *sixA =[NSNumber numberWithFloat:6];
+    NSNumber *sixB =[NSNumber numberWithFloat:6];
     
-    number1 = one;
-    number2 = sameAsOne;
+    BOOL areTheyEqual = [sixA isEqual:sixB];
     
-    
-    
-    
-    return (number1 == number2);
+    return areTheyEqual;
 }
 
 - (BOOL) integer:(NSInteger)integer1 isGreaterThan:(NSInteger)integer2 {
@@ -44,7 +41,7 @@
     integer1 = seven;
     integer2 = four;
     
-    return integer1 != integer2;
+    return integer1 < integer2;
 }
 
 @end
