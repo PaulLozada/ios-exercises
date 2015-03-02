@@ -12,12 +12,14 @@
 
 - (BOOL) string:(NSString *)string1 isTheSameAsString:(NSString *)string2 {
     
-    NSString *cheerios = @"cheerio";
-    NSString *cheerios2 = @"cheerio";
-   
-   
+    NSString * results;
     
-    return cheerios == cheerios2;
+    if (string1 == string2){
+        
+    }
+    
+    
+    return results;
     
     
 }

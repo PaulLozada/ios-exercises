@@ -13,30 +13,25 @@
 - (NSString *) itemMaryCanPurchaseForDollars:(NSInteger)dollars {
     NSString *itemToReturn;
     
-    NSInteger money = dollars;
     
-    if (money == 4){
-        NSString *mystring = [NSString stringWithFormat:@"get out of my store"];
-        itemToReturn = mystring;
-    } else {
-        NSString *otherString = [NSString stringWithFormat:@"have some gum"];
-        itemToReturn = otherString;
+    if (dollars == 4) {
+        NSString *fourDollars = [NSString stringWithFormat:@"get out of my store"];
+        itemToReturn = fourDollars;
+    } else if (dollars == 5) {
+        NSString *fiveDollars = [NSString stringWithFormat:@"have some gum"];
+        itemToReturn = fiveDollars;
+    } else if (dollars == 6) {
+        NSString *sixDollars = [NSString stringWithFormat:@"have an apple"];
+        itemToReturn = sixDollars;
+    } else if (dollars == 1000) {
+        NSString *oneThousandDollars = [NSString stringWithFormat:@"have an Apple computer"];
+        itemToReturn = oneThousandDollars;
+    } else if (dollars == 1000000000) {
+        NSString *oneBillionDollars = [NSString stringWithFormat:@"have The Big Apple"];
+        itemToReturn = oneBillionDollars;
     }
     
-    if (money == 6){
-        NSString *sixString = [NSString stringWithFormat:@"have an apple"];
-        itemToReturn = sixString;
-    } else {
-        NSString *appleComputer = [NSString stringWithFormat:@"have an Apple computer"];
-        itemToReturn = appleComputer;
-    }
-    
-    if (money == 1000000000) {
-        NSString *ballingAppleComputer = [NSString stringWithFormat:@"have The Big Apple"];
-        itemToReturn = ballingAppleComputer;
-                                          
-    }
-    return itemToReturn;
+       return itemToReturn;
 }
 
 - (NSUInteger) dollarCostForAppleFlavoredVodka {
