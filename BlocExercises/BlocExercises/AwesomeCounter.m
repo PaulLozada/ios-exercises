@@ -10,19 +10,25 @@
 
 @implementation AwesomeCounter
 
+
+
+
+
 - (NSString *) stringWithNumbersBetweenNumber:(NSInteger)number andOtherNumber: (NSInteger)otherNumber {
-    
-    NSString *stringExpression;
-    
-  
-   
-   
+
+    NSString *reference = [[NSString alloc] init];
     
     
+    NSInteger lowNumber = number < otherNumber ? number : otherNumber;
+    NSInteger highNumber = otherNumber > number ? otherNumber : number;
     
+    for (lowNumber =lowNumber; lowNumber <= highNumber; lowNumber++) {
+        reference = [reference stringByAppendingFormat:@"%ld",lowNumber];
+    }
     
-    return stringExpression;
-    
+
+    return reference;
 }
 
 @end
+
