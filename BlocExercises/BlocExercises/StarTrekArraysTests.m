@@ -39,14 +39,21 @@
 }
 
 - (void) testThatStringsAreTurnedIntoArraysProperly {
+    
     NSString *testString = [NSString stringWithFormat:@"%@;%@;%@", self.worf, self.picard, self.crusher];
+    
+    
     NSArray *expectedArray = @[self.worf, self.picard, self.crusher];
     NSArray *actualArray = [self.starTrekArrays arrayOfStarTrekCharactersFromString:testString];
+    
+    
     XCTAssertEqualObjects(expectedArray, actualArray, @"The returned array was different than expected.");
 
     testString = [NSString stringWithFormat:@"%@;%@;%@", self.picard, self.crusher, self.worf];
     expectedArray = @[self.picard, self.crusher, self.worf];
     actualArray = [self.starTrekArrays arrayOfStarTrekCharactersFromString:testString];
+    
+    
     XCTAssertEqualObjects(expectedArray, actualArray, @"The returned array was different than expected.");
 }
 
